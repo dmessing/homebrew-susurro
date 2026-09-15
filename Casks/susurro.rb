@@ -12,7 +12,7 @@ cask "susurro" do
 
   app "Susurro.app", target: "~/Applications/Susurro.app"
 
-  postflight do
+  postflight_steps do
     system_command "/usr/bin/xattr",
       args: ["-dr", "com.apple.quarantine", staged_path/"Susurro.app"]
     system_command "/usr/bin/xattr",
